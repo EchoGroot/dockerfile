@@ -1,0 +1,10 @@
+stages:
+  - build
+
+build_image:
+  stage: build
+  tags:
+    - x86
+  image: 172.1.1.1/common/docker-alpine:latest
+  script:
+    - chmod +x ./build-image.sh && ./build-image.sh
